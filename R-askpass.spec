@@ -4,14 +4,13 @@
 #
 Name     : R-askpass
 Version  : 1.1
-Release  : 2
+Release  : 3
 URL      : https://cran.r-project.org/src/contrib/askpass_1.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/askpass_1.1.tar.gz
 Summary  : Safe Password Entry for R, Git, and SSH
 Group    : Development/Tools
 License  : MIT
 Requires: R-askpass-lib = %{version}-%{release}
-Requires: R-sys
 BuildRequires : R-sys
 BuildRequires : buildreq-R
 
@@ -35,10 +34,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549253555
+export SOURCE_DATE_EPOCH=1552712103
 
 %install
-export SOURCE_DATE_EPOCH=1549253555
+export SOURCE_DATE_EPOCH=1552712103
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -74,8 +73,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library askpass|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  askpass || :
 
 
 %files
@@ -102,12 +100,11 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/askpass/help/paths.rds
 /usr/lib64/R/library/askpass/html/00Index.html
 /usr/lib64/R/library/askpass/html/R.css
-/usr/lib64/R/library/askpass/libs/symbols.rds
 /usr/lib64/R/library/askpass/mac-askpass
 /usr/lib64/R/library/askpass/mac-simplepass
+/usr/lib64/R/library/askpass/tests/testthat.R
+/usr/lib64/R/library/askpass/tests/testthat/test-option.R
 
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/R/library/askpass/libs/askpass.so
-/usr/lib64/R/library/askpass/libs/askpass.so.avx2
-/usr/lib64/R/library/askpass/libs/askpass.so.avx512
