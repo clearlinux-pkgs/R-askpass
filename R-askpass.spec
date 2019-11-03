@@ -4,7 +4,7 @@
 #
 Name     : R-askpass
 Version  : 1.1
-Release  : 13
+Release  : 14
 URL      : https://cran.r-project.org/src/contrib/askpass_1.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/askpass_1.1.tar.gz
 Summary  : Cross-platform utilities for prompting the user for credentials or a passphrase.
