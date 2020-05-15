@@ -4,17 +4,16 @@
 #
 Name     : R-askpass
 Version  : 1.1
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/askpass_1.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/askpass_1.1.tar.gz
-Summary  : Cross-platform utilities for prompting the user for credentials or a passphrase.
+Summary  : Safe Password Entry for R, Git, and SSH
 Group    : Development/Tools
 License  : MIT
 Requires: R-askpass-lib = %{version}-%{release}
 Requires: R-sys
 BuildRequires : R-sys
 BuildRequires : buildreq-R
-BuildRequires : util-linux
 
 %description
 passphrase, for example to authenticate with a server or read a protected key.
@@ -30,21 +29,22 @@ lib components for the R-askpass package.
 
 %prep
 %setup -q -c -n askpass
+cd %{_builddir}/askpass
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571796716
+export SOURCE_DATE_EPOCH=1589566850
 
 %install
-export SOURCE_DATE_EPOCH=1571796716
+export SOURCE_DATE_EPOCH=1589566850
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
