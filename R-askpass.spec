@@ -4,7 +4,7 @@
 #
 Name     : R-askpass
 Version  : 1.1
-Release  : 30
+Release  : 31
 URL      : https://cran.r-project.org/src/contrib/askpass_1.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/askpass_1.1.tar.gz
 Summary  : Safe Password Entry for R, Git, and SSH
@@ -36,10 +36,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1640889853
+export SOURCE_DATE_EPOCH=1640972107
 
 %install
-export SOURCE_DATE_EPOCH=1640889853
+export SOURCE_DATE_EPOCH=1640972107
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
