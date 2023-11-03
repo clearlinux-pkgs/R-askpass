@@ -5,7 +5,7 @@
 #
 Name     : R-askpass
 Version  : 1.2.0
-Release  : 40
+Release  : 41
 URL      : https://cran.r-project.org/src/contrib/askpass_1.2.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/askpass_1.2.0.tar.gz
 Summary  : Password Entry Utilities for R, Git, and SSH
