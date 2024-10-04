@@ -1,5 +1,5 @@
 PKG_NAME := R-askpass
-URL = https://cran.r-project.org/src/contrib/askpass_1.2.0.tar.gz
+URL = https://cran.r-project.org/src/contrib/askpass_1.2.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
